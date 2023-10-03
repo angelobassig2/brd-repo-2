@@ -85,10 +85,10 @@ function LineGraph() {
   }, [productList]);
 
   const colors = {
-    coke: "red",
-    mountain_dew: "yellow",
-    other: "black",
-    pocari: "blue",
+    coke: "rgb(240, 128, 128)",
+    mountain_dew: "rgb(152, 251, 152)",
+    other: "rgb(192, 192, 192)",
+    pocari: "rgb(173, 216, 230)",
   };
 
   const theme = {
