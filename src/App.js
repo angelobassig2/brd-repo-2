@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import LineGraph from "./components/LineGraph";
+import Form from "./components/Form";
+import Alert from "./components/Alert";
+import Warning from "./components/Warning";
+import DetectedFrame from "./components/DetectedFrame";
 
 function App() {
+  const [sharedValue, setSharedValue] = useState('');
+
+  // Function to update sharedValue
+  const updateValue = (newValue) => {
+    setSharedValue(newValue);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "stretch",
+        padding: "2.5%",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          marginBottom: 20
+        }}
+      >
+        <div style={{ flex: "1" }}>
+          <DetectedFrame value={sharedValue} />
+        </div>
+        <div
+          style={{
+            flex: "1",
+            display: "flex",
+            flexDirection: "column",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <Form value={sharedValue} updateValue={updateValue} />
+          <Warning value={sharedValue} />
+          <Alert value={sharedValue} />
+        </div>
+      </div>
+      <LineGraph />
     </div>
   );
 }
