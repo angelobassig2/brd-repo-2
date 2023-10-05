@@ -90,11 +90,11 @@ function Warning({ value }) {
 
   const getCountTextStyle = (count, threshold) => {
     if (count === 0) {
-      return { color: "red", fontWeight: 'bold' };
+      return { color: "red", fontWeight: "bold" };
     } else if (count <= threshold && count > 0) {
-      return { color: "#d48d1c", fontWeight: 'bold' };
+      return { color: "#d48d1c", fontWeight: "bold" };
     } else {
-      return { color: "black", fontWeight: 'bold' };
+      return { color: "black", fontWeight: "bold" };
     }
   };
 
@@ -123,7 +123,7 @@ function Warning({ value }) {
           fontWeight: "bold",
         }}
       >
-        CAN REFILL
+        ALL PRODUCTS
       </p>
       <div
         style={{
@@ -134,41 +134,40 @@ function Warning({ value }) {
           display: "flex",
           overflowX: "auto",
           padding: 5,
-          marginBottom: 10
+          marginBottom: 10,
         }}
       >
-        {data.map(
-          (datum, index) =>
-          (datum.count <= datum.threshold && datum.count > 0) && (
-              <Card sx={cardStyle} key={index}>
-                <CardMedia
-                  sx={mediaStyle}
-                  component="img"
-                  alt="testing"
-                  height="200"
-                  src={getProductImage(datum.product)}
-                />
-                <CardContent>
-                  <Box sx={contentStyle}>
-                    <div>
-                      <Typography sx={titleStyle} variant="h5" component="div">
-                        {datum.product}
-                      </Typography>
-                      <Typography sx={subtitleStyle} color="text.secondary">
-                      </Typography>
-                    </div>
-                    <Typography
-                      variant="h5"
-                      component="div"
-                      style={getCountTextStyle(datum.count, datum.threshold)}
-                    >
-                      {datum.count}
-                    </Typography>
-                  </Box>
-                </CardContent>
-              </Card>
-            )
-        )}
+        {data.map((datum, index) => (
+          <Card sx={cardStyle} key={index}>
+            <CardMedia
+              sx={mediaStyle}
+              component="img"
+              alt="testing"
+              height="200"
+              src={getProductImage(datum.product)}
+            />
+            <CardContent>
+              <Box sx={contentStyle}>
+                <div>
+                  <Typography sx={titleStyle} variant="h5" component="div">
+                    {datum.product}
+                  </Typography>
+                  <Typography
+                    sx={subtitleStyle}
+                    color="text.secondary"
+                  ></Typography>
+                </div>
+                <Typography
+                  variant="h5"
+                  component="div"
+                  style={getCountTextStyle(datum.count, datum.threshold)}
+                >
+                  {datum.count}
+                </Typography>
+              </Box>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </div>
   );

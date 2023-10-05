@@ -123,7 +123,7 @@ function Alert({ value }) {
           fontWeight: "bold",
         }}
       >
-        OUT OF STOCK
+        CAN REFILL
       </p>
       <div
         style={{
@@ -139,7 +139,7 @@ function Alert({ value }) {
       >
         {data.map(
           (datum, index) =>
-            datum.count === 0 && (
+          (datum.count <= datum.threshold && datum.count > 0) && (
               <Card sx={cardStyle} key={index}>
                 <CardMedia
                   sx={mediaStyle}
