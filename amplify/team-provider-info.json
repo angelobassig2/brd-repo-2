@@ -1,0 +1,28 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-brdwebapp-dev-73531-authRole",
+      "UnauthRoleArn": "arn:aws:iam::021454448884:role/amplify-brdwebapp-dev-73531-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::021454448884:role/amplify-brdwebapp-dev-73531-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-brdwebapp-dev-73531-deployment",
+      "UnauthRoleName": "amplify-brdwebapp-dev-73531-unauthRole",
+      "StackName": "amplify-brdwebapp-dev-73531",
+      "StackId": "arn:aws:cloudformation:us-west-2:021454448884:stack/amplify-brdwebapp-dev-73531/b747ebe0-630e-11ee-b7df-029b58fbc7ab",
+      "AmplifyAppId": "dfgcg4haxbrkg"
+    }
+  },
+  "testing": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-brdwebapp-testing-73708-authRole",
+      "UnauthRoleArn": "arn:aws:iam::021454448884:role/amplify-brdwebapp-testing-73708-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::021454448884:role/amplify-brdwebapp-testing-73708-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-brdwebapp-testing-73708-deployment",
+      "UnauthRoleName": "amplify-brdwebapp-testing-73708-unauthRole",
+      "StackName": "amplify-brdwebapp-testing-73708",
+      "StackId": "arn:aws:cloudformation:us-west-2:021454448884:stack/amplify-brdwebapp-testing-73708/f147f1a0-630e-11ee-a3da-0a692256bc87",
+      "AmplifyAppId": "dfgcg4haxbrkg"
+    }
+  }
+}
